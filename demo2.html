@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hiệu ứng Click vào Ảnh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f1ff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    img {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hộp hiển thị ảnh to */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #overlay img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click vào ảnh để xem lớn</h1>
+
+  <!-- Ảnh nhỏ -->
+  <img src="1.jpeg" alt="Ảnh 1" onclick="phongToAnh(this.src)">
+  <img src="2.jpeg" alt="Ảnh 2" onclick="phongToAnh(this.src)">
+  <img src="3.jpeg" alt="Ảnh 3" onclick="phongToAnh(this.src)">
+  <img src="4.jpeg" alt="Ảnh 3" onclick="phongToAnh(this.src)">
+
+  <!-- Lớp phủ hiển thị ảnh lớn -->
+  <div id="overlay" onclick="dongAnh()">
+    <img id="anhTo" src="">
+  </div>
+
+  <script>
+    function phongToAnh(src) {
+      document.getElementById("anhTo").src = src;
+      document.getElementById("overlay").style.display = "flex";
+    }
+
+    function dongAnh() {
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

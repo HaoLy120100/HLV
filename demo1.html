@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Đây là 1 tài liệu HTML5 -->
+
+<html lang="vi"> <!-- Ngôn ngữ chính là Tiếng Việt -->
+<head>
+  <meta charset="UTF-8"> <!-- giúp hiển thị đúng tiếng Việt -->
+  <title>Trang Web Đơn Giản</title> <!-- Tiêu đề hiển thị trên tab trình duyệt -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f1ff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #eb0c0cfd;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    img {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HELLO</h1>
+  <p>Chào mừng bạn đến với kho ảnh của bọn tớ</p>
+
+  <!-- Các hình ảnh -->
+  <img src="1.jpeg" alt="Hào Lý Văn" width="300">
+  <img src="2.jpeg" alt="tdcute" width="300">
+  <img src="3.jpeg" alt="tdcute" width="400">
+  <img src="4.jpeg" alt="tdcute" width="300">
+
+  <br><br>
+
+  <!-- Nút chuyển trang -->
+  <button onclick="window.location.href='demo2.html'">Sang trang 2</button>
+
+  <!-- Nút hiện thông báo -->
+  <button onclick="chaoMung()">WELCOME</button>
+
+  <script>
+    function chaoMung() {
+      alert("Cảm ơn bạn đã ghé thăm!");
+    }
+  </script>
+</body>
+</html>
